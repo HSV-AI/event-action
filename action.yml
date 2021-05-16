@@ -1,7 +1,7 @@
 name: 'Dump Environment'
 description: 'Simple python action that dumps the environment'
 
-repo-token:
+repo_token:
   description: 'The GITHUB_TOKEN secret'
   required: true
 

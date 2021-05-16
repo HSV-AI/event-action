@@ -5,8 +5,8 @@ import requests
 import yaml
 import sys
 
-# token = os.getenv("repo-token")
-# g = Github(token)
-print(sys.argv)
+token = os.getenv("INPUT_REPO_TOKEN")
+g = Github(token)
+
 print('Environment')
 print(os.environ)
