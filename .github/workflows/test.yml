@@ -1,5 +1,8 @@
 name: Test Workflow
-on: push
+# on: push
+on:
+  issues:
+    types: [labeled]
 jobs:
   first-job:
     runs-on: ubuntu-latest
