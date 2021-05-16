@@ -4,6 +4,7 @@ import re
 import requests
 import yaml
 import sys
+import json
 
 print('Environment')
 print(os.environ)
@@ -13,6 +14,16 @@ repo_string = os.getenv("GITHUB_REPOSITORY")
 g = Github(token)
 
 repo = g.get_repo(repo_string)
+
+path = os.getenv("GITHUB_EVENT_PATH")
+
+
+with open(path) as f:
+  data = json.load(f)
+
+print(data)
+
+
 # issue = repo.get_issue(number=12)
 # print(issue.title)
 # print(issue.body)
