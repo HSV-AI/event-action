@@ -11,6 +11,8 @@ jobs:
         # in our case it would be nashmaniac/create-issue-action@v1.0 where v1.0 is the version of action
         # for now we will give directory path. The directory must contain action.yaml
         uses: ./
+        env:
+          repo-token: ${{ secrets.GITHUB_TOKEN}}
         # pass user input as arguments
         # with:
         #   title: Build Failed
