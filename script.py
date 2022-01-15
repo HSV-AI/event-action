@@ -5,6 +5,7 @@ import requests
 import yaml
 import sys
 import json
+import tweepy
 
 token = os.getenv("INPUT_REPO_TOKEN")
 repo_string = os.getenv("GITHUB_REPOSITORY")
